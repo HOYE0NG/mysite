@@ -9,7 +9,7 @@ def index(request):
         if content:
             if '사랑해' in content:
                 content = "나도 사랑해 ㅎㅎ"
-            if '보고싶' in content:
+            elif '보고싶' in content:
                 content = "그럼 빨리 와야지ㅋ"
             else:
                 content = "듣고 싶은 말이 아님ㅋ"
