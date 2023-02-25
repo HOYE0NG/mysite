@@ -1,1 +1,14 @@
-<h1 style="width:100%; align-content: center;">알러뷰빈지윤</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<div class="container-sm mt-2">
+    <form method="post">
+        {% csrf_token %}
+            <label class="form-label" for="content">편지 쓰기</label>
+            <textarea class="form-control mb-2" name="content" id="content" rows="10"></textarea>
+            <input type="submit" value="보내기">
+    </form>
+</div>
+
+{% if content %}
+    <p class="text-center">{{ content }}</p>
+{% endif %}
